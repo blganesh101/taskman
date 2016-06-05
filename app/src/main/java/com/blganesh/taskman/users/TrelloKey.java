@@ -1,4 +1,4 @@
-package com.blganesh.taskman.pomodoro;
+package com.blganesh.taskman.users;
 
 /**
  * Created by ganeshbanda on 05/06/16.
@@ -26,8 +26,15 @@ public final class TrelloKey {
                 .getString(KEY_TOKEN, null);
     }
 
+    public static void clearUserToken(Context context)
+    {
+        context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+                .edit()
+                .putString(KEY_TOKEN, null)
+                .commit();
+    }
     public static String getAppKey() {
-        return "6ea4c21c2d0d193dbfab3c233f4ea1f4";
+        return "9e3f8bc4ec7b6cfc1684f1d838f65961";
     }
 }
 

@@ -13,9 +13,9 @@ import android.support.v4.util.SimpleArrayMap;
 import android.text.TextUtils;
 
 import com.blganesh.taskman.BaseApplication;
-import com.blganesh.taskman.pomodoro.TrelloKey;
-import com.blganesh.taskman.util.Task;
-import com.blganesh.taskman.util.TaskLoader;
+import com.blganesh.taskman.users.TrelloKey;
+import com.blganesh.taskman.tasks.Task;
+import com.blganesh.taskman.loaders.TaskLoader;
 import com.blganesh.taskman.R;
 import com.blganesh.taskman.TaskManMainActivity;
 
@@ -51,7 +51,7 @@ public final class SplashActivity extends TaskManMainActivity implements Handler
         if (mRemaining > 0L) {
             mHandler.sendEmptyMessageDelayed(WHAT_CONTINUE, mRemaining);
         } else {
-            goNext(this);
+            launchActivity(this);
         }
 
         mLastTick = SystemClock.elapsedRealtime();
@@ -113,7 +113,13 @@ public final class SplashActivity extends TaskManMainActivity implements Handler
     }
 
     private static void launchActivity(Activity activity) {
-
+        if (TextUtils.isEmpty(TrelloKey.getPersistedToken(activity))) {
+            activity.startActivity(new Intent(activity, TrelloWebLoginActivity.class));
+        } else if (TrelloLoginActivity.trelloFullySetup(activity)) {
+            activity.startActivity(new Intent(activity, TrelloPomoActivity.class));
+        } else {
+            activity.startActivity(new Intent(activity, TrelloLoginActivity.class));
+        }
 
         activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }

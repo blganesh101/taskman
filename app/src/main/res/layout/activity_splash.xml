@@ -3,10 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="56sp"
-        android:text="@string/app_name" />
+
+    <com.blganesh.taskman.util.SplashView
+        xmlns:app="http://schemas.android.com/apk/res/com.blganesh.taskman"
+        android:id="@+id/splash_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:splashIcon="@drawable/logo"
+        app:iconColor="@color/white"
+        app:duration="500"
+        app:holeFillColor="@color/white"
+        app:removeFromParentOnEnd="true" />
 </FrameLayout>

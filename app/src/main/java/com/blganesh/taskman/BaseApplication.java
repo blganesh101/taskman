@@ -4,7 +4,7 @@ package com.blganesh.taskman;
  * Created by ganeshbanda on 05/06/16.
  */
 import android.app.Application;
-import com.blganesh.taskman.util.TaskCache;
+import com.blganesh.taskman.tasks.TaskCache;
 
 public final class BaseApplication extends Application {
     private static BaseApplication sApp;

@@ -1,4 +1,4 @@
-package com.blganesh.taskman.util;
+package com.blganesh.taskman.loaders;
 
 /**
  * Created by ganeshbanda on 05/06/16.

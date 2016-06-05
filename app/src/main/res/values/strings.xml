@@ -11,4 +11,43 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash">SplashActivity</string>
 
+    <string name="login_label">Login to Trello</string>
+    <string name="setup_label">Trello setup</string>
+    <string name="tasks_label">Tasks</string>
+    <string name="timer_label">Timer</string>
+    <string name="board_label">Pick a board</string>
+    <string name="to_do_label">Pick a to-do list</string>
+    <string name="doing_label">Pick a doing list</string>
+    <string name="done_label">Pick a done list</string>
+    <string name="break_label">Break</string>
+
+    <string-array name="tasks_tabs_titles">
+        <item>To do</item>
+        <item>Doing</item>
+        <item>Done</item>
+    </string-array>
+
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="stop">Stop</string>
+
+    <string name="podomoro_ended_title">Podomoro ended!</string>
+    <string name="done">Done</string>
+    <string name="short_break">Short break</string>
+    <string name="long_break">Long break</string>
+    <string name="task_done_comment">Task finished after %1$d pomodoros, total %2$s</string>
+    <string name="dismiss_note">Dimissing this popup will place this card back in your to-do list</string>
+    <string name="timer_notification_title">Pomodoro ended!</string>
+    <string name="timer_notification_text">Decide what\'s next</string>
+
+    <string name="logout">Logout</string>
+
+    <string name="error_trello_login">There was an error connecting to Trello. Please try again later</string>
+    <string name="error_loading_boards">An error occurred while loading Trello boards</string>
+    <string name="error_loading_lists">An error occurred while loading Trello lists</string>
+    <string name="error_loading_cards">An error occurred while loading Trello cards</string>
+    <string name="error_task_sync">An error occurred while updating the task</string>
+    <string name="error_card_move">An error occurred while moving the Trello card</string>
+    <string name="error_comment_creation">An error occurred while adding the Trello comment</string>
+
 </resources>

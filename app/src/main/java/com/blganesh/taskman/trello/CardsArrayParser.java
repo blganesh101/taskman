@@ -1,0 +1,24 @@
+package com.blganesh.taskman.trello;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class CardsArrayParser extends JsonArrayParser<List<Card>> {
+    @Override
+    List<Card> parseJson(JSONArray root) throws JSONException, ParseException {
+        List<Card> lists = new ArrayList<>();
+
+        for (int i = 0; i < root.length(); ++i) {
+            JSONObject listJson = root.getJSONObject(i);
+            lists.add(new Card(listJson.getString("id"),
+                    listJson.getString("name")));
+        }
+
+        return lists;
+    }
+}
