@@ -151,7 +151,7 @@ public final class TaskTimerActivity extends TaskManMainActivity implements View
 
     @Override
     public void onBackPressed() {
-        stop();
+        //stop();
         super.onBackPressed();
     }
 

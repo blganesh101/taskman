@@ -64,10 +64,11 @@ public final class Task implements Parcelable {
                 mTotalTime + time);
     }
 
-    public String getPrettyTotalTime() {
-        long hours = TimeUnit.MILLISECONDS.toHours(mTotalTime);
-        long minutes = TimeUnit.MILLISECONDS.toMinutes(mTotalTime) - TimeUnit.HOURS.toMinutes(hours);
-        return String.format("%dh%02d", hours, minutes);
+    public String  getPrettyTotalTime() {
+        String hms = String.format("%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(mTotalTime),
+                TimeUnit.MILLISECONDS.toMinutes(mTotalTime) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(mTotalTime)),
+                TimeUnit.MILLISECONDS.toSeconds(mTotalTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(mTotalTime)));
+        return hms;
     }
 
     @Override
