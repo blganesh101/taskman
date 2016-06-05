@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/mat_green_bg"
     tools:context=".activities.TaskTimerActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/appbar_padding_top"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
@@ -40,17 +40,16 @@
             <ImageView android:id="@+id/timer_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:padding="16dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_timer"
+                android:scaleType="fitCenter"
                 android:background="?selectableItemBackground" />
             <TextView
                 android:id="@+id/time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:paddingBottom="30dp"
+                android:paddingBottom="20dp"
                 android:textSize="56sp"/>
             <Button
                 android:id="@+id/pause_resume"
@@ -58,13 +57,19 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:theme="@style/Widget.AppCompat.Button.Colored"
+                android:background="@color/mat_green_btn"
                 android:text="@string/pause"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
             <Button
                 android:id="@+id/stop"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:theme="@style/Widget.AppCompat.Button.Colored"
+                android:background="@color/mat_green_btn"
                 android:text="@string/stop"/>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

@@ -13,7 +13,7 @@
 
     <string name="login_label">Login to Trello</string>
     <string name="setup_label">Trello setup</string>
-    <string name="tasks_label">Tasks</string>
+    <string name="tasks_label">Trello Tasks</string>
     <string name="timer_label">Timer</string>
     <string name="board_label">Pick a board</string>
     <string name="to_do_label">Pick a to-do list</string>

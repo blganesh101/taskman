@@ -3,4 +3,8 @@
     <color name="white">#FFFFFF</color>
     <color name="twitter_blue">#17A9E5</color>
     <color name="mat_green">#009688</color>
+    <color name="mat_green_bg">#E0F2F1</color>
+    <color name="mat_green_btn">#00695C</color>
+    <color name="mat_green_card">#ECEFF1</color>
+
 </resources>
